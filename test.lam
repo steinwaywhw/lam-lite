@@ -1,0 +1,9 @@
+
+
+
+require "stdio" as io
+require "./list" as list
+
+val f = lam x => x + 1
+val z = 1
+val output = f z
