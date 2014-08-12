@@ -3,29 +3,72 @@
 require "stdio" as io
 require "./list" as list
 
-val f = lam x => x + 1
-val z = 
+val x = lam x y z => x * 1
+val z = x y
+
 
 */
 grammar LamLite;
 
-
+// Programs
 program
-    : term+
+    : (binding | term)+
     ;
 
+// Bindings
+binding
+    : K_VAL pattern EQ term
+    ;
+
+// Patterns
+pattern
+    : patternName 
+    | patternVoid
+    | LPAREN pattern RPAREN
+    ;
+
+patternName
+    : IDENTIFIER
+    ;
+
+patternVoid
+    : LPAREN RPAREN
+    ;
+
+// Terms
 term
-    : termVariable
+    : termConstant
+    | termVariable
     | termLambda
     | termApplication
-    | term
-    
+    | LPAREN term RPAREN
+    ;
 
+termConstant
+    : literal
+    ;
+    
+termVariable
+    : IDENTIFIER
+    ;
+
+termLambda
+    : K_LAM pattern+ EQ term
+    ;
+
+termApplication
+    : term+
+    | term opInfix term 
+    | term opPostfix
+    ;
+
+// Types
 type
     : primitiveType
     | functionType
     | sumType
     | productType
+    | LPAREN type RPAREN
     ;
 
 primitiveType
@@ -43,9 +86,8 @@ sumType
     ;
 
 productType
-    : LPAREN type (',' type)* RPAREN
+    : LPAREN type (',' type)+ RPAREN
     ;
-
 
 
 
