@@ -1,4 +1,4 @@
 
-
-val x = lam x y z => lam x * 1
-val z = x y
+val f = lam x => x * 1 + 2
+val ++ [infixl] = lam x y => 3 * f x + 1
+val z = a ++ b

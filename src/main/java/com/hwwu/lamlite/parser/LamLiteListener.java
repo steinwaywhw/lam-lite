@@ -1,5 +1,8 @@
-// Generated from C:\Users\IBM_ADMIN\Documents\GitHub\lam-lite\src\main\java\com\hwwu\lamlite\parser\LamLite.g4 by ANTLR 4.3
+// Generated from /vagrant/src/main/java/com/hwwu/lamlite/parser/LamLite.g4 by ANTLR 4.4.1-dev
 package com.hwwu.lamlite.parser;
+ 
+import java.util.Arrays; 
+
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -9,104 +12,81 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface LamLiteListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#expression}.
+	 * Enter a parse tree produced by the {@code constant}
+	 * labeled alternative in {@link LamLiteParser#termnode}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(@NotNull LamLiteParser.ExpressionContext ctx);
+	void enterConstant(@NotNull LamLiteParser.ConstantContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#expression}.
+	 * Exit a parse tree produced by the {@code constant}
+	 * labeled alternative in {@link LamLiteParser#termnode}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(@NotNull LamLiteParser.ExpressionContext ctx);
-
+	void exitConstant(@NotNull LamLiteParser.ConstantContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#exp_id}.
+	 * Enter a parse tree produced by the {@code nested}
+	 * labeled alternative in {@link LamLiteParser#termnode}.
 	 * @param ctx the parse tree
 	 */
-	void enterExp_id(@NotNull LamLiteParser.Exp_idContext ctx);
+	void enterNested(@NotNull LamLiteParser.NestedContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#exp_id}.
+	 * Exit a parse tree produced by the {@code nested}
+	 * labeled alternative in {@link LamLiteParser#termnode}.
 	 * @param ctx the parse tree
 	 */
-	void exitExp_id(@NotNull LamLiteParser.Exp_idContext ctx);
-
+	void exitNested(@NotNull LamLiteParser.NestedContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#module}.
+	 * Enter a parse tree produced by {@link LamLiteParser#patternAny}.
 	 * @param ctx the parse tree
 	 */
-	void enterModule(@NotNull LamLiteParser.ModuleContext ctx);
+	void enterPatternAny(@NotNull LamLiteParser.PatternAnyContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#module}.
+	 * Exit a parse tree produced by {@link LamLiteParser#patternAny}.
 	 * @param ctx the parse tree
 	 */
-	void exitModule(@NotNull LamLiteParser.ModuleContext ctx);
-
+	void exitPatternAny(@NotNull LamLiteParser.PatternAnyContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#exp_app}.
+	 * Enter a parse tree produced by {@link LamLiteParser#patternConstant}.
 	 * @param ctx the parse tree
 	 */
-	void enterExp_app(@NotNull LamLiteParser.Exp_appContext ctx);
+	void enterPatternConstant(@NotNull LamLiteParser.PatternConstantContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#exp_app}.
+	 * Exit a parse tree produced by {@link LamLiteParser#patternConstant}.
 	 * @param ctx the parse tree
 	 */
-	void exitExp_app(@NotNull LamLiteParser.Exp_appContext ctx);
-
+	void exitPatternConstant(@NotNull LamLiteParser.PatternConstantContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#pattern_id}.
+	 * Enter a parse tree produced by {@link LamLiteParser#termConstant}.
 	 * @param ctx the parse tree
 	 */
-	void enterPattern_id(@NotNull LamLiteParser.Pattern_idContext ctx);
+	void enterTermConstant(@NotNull LamLiteParser.TermConstantContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#pattern_id}.
+	 * Exit a parse tree produced by {@link LamLiteParser#termConstant}.
 	 * @param ctx the parse tree
 	 */
-	void exitPattern_id(@NotNull LamLiteParser.Pattern_idContext ctx);
-
+	void exitTermConstant(@NotNull LamLiteParser.TermConstantContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#pattern_any}.
+	 * Enter a parse tree produced by the {@code lambda}
+	 * labeled alternative in {@link LamLiteParser#termnode}.
 	 * @param ctx the parse tree
 	 */
-	void enterPattern_any(@NotNull LamLiteParser.Pattern_anyContext ctx);
+	void enterLambda(@NotNull LamLiteParser.LambdaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#pattern_any}.
+	 * Exit a parse tree produced by the {@code lambda}
+	 * labeled alternative in {@link LamLiteParser#termnode}.
 	 * @param ctx the parse tree
 	 */
-	void exitPattern_any(@NotNull LamLiteParser.Pattern_anyContext ctx);
-
+	void exitLambda(@NotNull LamLiteParser.LambdaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#exp_let}.
+	 * Enter a parse tree produced by {@link LamLiteParser#termLambda}.
 	 * @param ctx the parse tree
 	 */
-	void enterExp_let(@NotNull LamLiteParser.Exp_letContext ctx);
+	void enterTermLambda(@NotNull LamLiteParser.TermLambdaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#exp_let}.
+	 * Exit a parse tree produced by {@link LamLiteParser#termLambda}.
 	 * @param ctx the parse tree
 	 */
-	void exitExp_let(@NotNull LamLiteParser.Exp_letContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#exp_lam}.
-	 * @param ctx the parse tree
-	 */
-	void enterExp_lam(@NotNull LamLiteParser.Exp_lamContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#exp_lam}.
-	 * @param ctx the parse tree
-	 */
-	void exitExp_lam(@NotNull LamLiteParser.Exp_lamContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#exp_ite}.
-	 * @param ctx the parse tree
-	 */
-	void enterExp_ite(@NotNull LamLiteParser.Exp_iteContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#exp_ite}.
-	 * @param ctx the parse tree
-	 */
-	void exitExp_ite(@NotNull LamLiteParser.Exp_iteContext ctx);
-
+	void exitTermLambda(@NotNull LamLiteParser.TermLambdaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LamLiteParser#pattern}.
 	 * @param ctx the parse tree
@@ -117,7 +97,36 @@ public interface LamLiteListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitPattern(@NotNull LamLiteParser.PatternContext ctx);
-
+	/**
+	 * Enter a parse tree produced by {@link LamLiteParser#termVariable}.
+	 * @param ctx the parse tree
+	 */
+	void enterTermVariable(@NotNull LamLiteParser.TermVariableContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LamLiteParser#termVariable}.
+	 * @param ctx the parse tree
+	 */
+	void exitTermVariable(@NotNull LamLiteParser.TermVariableContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LamLiteParser#patternVariable}.
+	 * @param ctx the parse tree
+	 */
+	void enterPatternVariable(@NotNull LamLiteParser.PatternVariableContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LamLiteParser#patternVariable}.
+	 * @param ctx the parse tree
+	 */
+	void exitPatternVariable(@NotNull LamLiteParser.PatternVariableContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LamLiteParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void enterTerm(@NotNull LamLiteParser.TermContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LamLiteParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void exitTerm(@NotNull LamLiteParser.TermContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LamLiteParser#program}.
 	 * @param ctx the parse tree
@@ -128,18 +137,16 @@ public interface LamLiteListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitProgram(@NotNull LamLiteParser.ProgramContext ctx);
-
 	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#pattern_constant}.
+	 * Enter a parse tree produced by {@link LamLiteParser#patternOperator}.
 	 * @param ctx the parse tree
 	 */
-	void enterPattern_constant(@NotNull LamLiteParser.Pattern_constantContext ctx);
+	void enterPatternOperator(@NotNull LamLiteParser.PatternOperatorContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#pattern_constant}.
+	 * Exit a parse tree produced by {@link LamLiteParser#patternOperator}.
 	 * @param ctx the parse tree
 	 */
-	void exitPattern_constant(@NotNull LamLiteParser.Pattern_constantContext ctx);
-
+	void exitPatternOperator(@NotNull LamLiteParser.PatternOperatorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LamLiteParser#binding}.
 	 * @param ctx the parse tree
@@ -150,29 +157,18 @@ public interface LamLiteListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBinding(@NotNull LamLiteParser.BindingContext ctx);
-
 	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#require}.
+	 * Enter a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link LamLiteParser#termnode}.
 	 * @param ctx the parse tree
 	 */
-	void enterRequire(@NotNull LamLiteParser.RequireContext ctx);
+	void enterVariable(@NotNull LamLiteParser.VariableContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#require}.
+	 * Exit a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link LamLiteParser#termnode}.
 	 * @param ctx the parse tree
 	 */
-	void exitRequire(@NotNull LamLiteParser.RequireContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link LamLiteParser#exp_constant}.
-	 * @param ctx the parse tree
-	 */
-	void enterExp_constant(@NotNull LamLiteParser.Exp_constantContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LamLiteParser#exp_constant}.
-	 * @param ctx the parse tree
-	 */
-	void exitExp_constant(@NotNull LamLiteParser.Exp_constantContext ctx);
-
+	void exitVariable(@NotNull LamLiteParser.VariableContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LamLiteParser#literal}.
 	 * @param ctx the parse tree
@@ -183,7 +179,6 @@ public interface LamLiteListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLiteral(@NotNull LamLiteParser.LiteralContext ctx);
-
 	/**
 	 * Enter a parse tree produced by {@link LamLiteParser#docstr}.
 	 * @param ctx the parse tree

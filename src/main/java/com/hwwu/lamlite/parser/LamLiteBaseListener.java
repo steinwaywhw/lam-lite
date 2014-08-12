@@ -1,5 +1,8 @@
-// Generated from C:\Users\IBM_ADMIN\Documents\GitHub\lam-lite\src\main\java\com\hwwu\lamlite\parser\LamLite.g4 by ANTLR 4.3
+// Generated from /vagrant/src/main/java/com/hwwu/lamlite/parser/LamLite.g4 by ANTLR 4.4.1-dev
 package com.hwwu.lamlite.parser;
+ 
+import java.util.Arrays; 
+
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -17,118 +20,85 @@ public class LamLiteBaseListener implements LamLiteListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(@NotNull LamLiteParser.ExpressionContext ctx) { }
+	@Override public void enterConstant(@NotNull LamLiteParser.ConstantContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(@NotNull LamLiteParser.ExpressionContext ctx) { }
-
+	@Override public void exitConstant(@NotNull LamLiteParser.ConstantContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExp_id(@NotNull LamLiteParser.Exp_idContext ctx) { }
+	@Override public void enterNested(@NotNull LamLiteParser.NestedContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExp_id(@NotNull LamLiteParser.Exp_idContext ctx) { }
-
+	@Override public void exitNested(@NotNull LamLiteParser.NestedContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterModule(@NotNull LamLiteParser.ModuleContext ctx) { }
+	@Override public void enterPatternAny(@NotNull LamLiteParser.PatternAnyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitModule(@NotNull LamLiteParser.ModuleContext ctx) { }
-
+	@Override public void exitPatternAny(@NotNull LamLiteParser.PatternAnyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExp_app(@NotNull LamLiteParser.Exp_appContext ctx) { }
+	@Override public void enterPatternConstant(@NotNull LamLiteParser.PatternConstantContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExp_app(@NotNull LamLiteParser.Exp_appContext ctx) { }
-
+	@Override public void exitPatternConstant(@NotNull LamLiteParser.PatternConstantContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPattern_id(@NotNull LamLiteParser.Pattern_idContext ctx) { }
+	@Override public void enterTermConstant(@NotNull LamLiteParser.TermConstantContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPattern_id(@NotNull LamLiteParser.Pattern_idContext ctx) { }
-
+	@Override public void exitTermConstant(@NotNull LamLiteParser.TermConstantContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPattern_any(@NotNull LamLiteParser.Pattern_anyContext ctx) { }
+	@Override public void enterLambda(@NotNull LamLiteParser.LambdaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPattern_any(@NotNull LamLiteParser.Pattern_anyContext ctx) { }
-
+	@Override public void exitLambda(@NotNull LamLiteParser.LambdaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExp_let(@NotNull LamLiteParser.Exp_letContext ctx) { }
+	@Override public void enterTermLambda(@NotNull LamLiteParser.TermLambdaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExp_let(@NotNull LamLiteParser.Exp_letContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExp_lam(@NotNull LamLiteParser.Exp_lamContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExp_lam(@NotNull LamLiteParser.Exp_lamContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExp_ite(@NotNull LamLiteParser.Exp_iteContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExp_ite(@NotNull LamLiteParser.Exp_iteContext ctx) { }
-
+	@Override public void exitTermLambda(@NotNull LamLiteParser.TermLambdaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -141,7 +111,42 @@ public class LamLiteBaseListener implements LamLiteListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitPattern(@NotNull LamLiteParser.PatternContext ctx) { }
-
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTermVariable(@NotNull LamLiteParser.TermVariableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTermVariable(@NotNull LamLiteParser.TermVariableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPatternVariable(@NotNull LamLiteParser.PatternVariableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPatternVariable(@NotNull LamLiteParser.PatternVariableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTerm(@NotNull LamLiteParser.TermContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTerm(@NotNull LamLiteParser.TermContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -154,20 +159,18 @@ public class LamLiteBaseListener implements LamLiteListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitProgram(@NotNull LamLiteParser.ProgramContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPattern_constant(@NotNull LamLiteParser.Pattern_constantContext ctx) { }
+	@Override public void enterPatternOperator(@NotNull LamLiteParser.PatternOperatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPattern_constant(@NotNull LamLiteParser.Pattern_constantContext ctx) { }
-
+	@Override public void exitPatternOperator(@NotNull LamLiteParser.PatternOperatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -180,33 +183,18 @@ public class LamLiteBaseListener implements LamLiteListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBinding(@NotNull LamLiteParser.BindingContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRequire(@NotNull LamLiteParser.RequireContext ctx) { }
+	@Override public void enterVariable(@NotNull LamLiteParser.VariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRequire(@NotNull LamLiteParser.RequireContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExp_constant(@NotNull LamLiteParser.Exp_constantContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExp_constant(@NotNull LamLiteParser.Exp_constantContext ctx) { }
-
+	@Override public void exitVariable(@NotNull LamLiteParser.VariableContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -219,7 +207,6 @@ public class LamLiteBaseListener implements LamLiteListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLiteral(@NotNull LamLiteParser.LiteralContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
